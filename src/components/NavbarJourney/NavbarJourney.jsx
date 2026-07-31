@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import MobileMenu from '../MobileMenu/MobileMenu';
 import styles from './NavbarJourney.module.css';
 
 const navItems = [
@@ -8,6 +10,9 @@ const navItems = [
 ];
 
 export default function NavbarJourney() {
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className={styles.nav}>
       <span className={`${styles.sideLabel} ${styles.sideLabelLeft}`}>
@@ -36,9 +41,21 @@ export default function NavbarJourney() {
         Est. 2024
       </span>
 
-      <button className={styles.mobileMenuBtn} aria-label="Menu">
+      <button
+        className={styles.mobileMenuBtn}
+        onClick={() => setMenuOpen(true)}
+        aria-label="Buka menu"
+      >
         <span className="material-symbols-outlined">menu</span>
       </button>
+
+      {menuOpen && (
+        <MobileMenu
+          items={navItems}
+          activePath={location.pathname}
+          onClose={() => setMenuOpen(false)}
+        />
+      )}
     </nav>
   );
 }

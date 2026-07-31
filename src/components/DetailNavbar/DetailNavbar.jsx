@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useScrollNav } from '../../hooks/useScrollNav';
+import MobileMenu from '../MobileMenu/MobileMenu';
 import styles from './DetailNavbar.module.css';
 
 const navItems = [
@@ -10,6 +12,8 @@ const navItems = [
 
 export default function DetailNavbar() {
   const scrolled = useScrollNav();
+  const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ''}`}>
@@ -43,11 +47,20 @@ export default function DetailNavbar() {
 
         <button
           className={`${styles.mobileBtn} ${scrolled ? styles.mobileBtnDark : ''}`}
-          aria-label="Menu"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Buka menu"
         >
           <span className="material-symbols-outlined">menu</span>
         </button>
       </div>
+
+      {menuOpen && (
+        <MobileMenu
+          items={navItems}
+          activePath={location.pathname}
+          onClose={() => setMenuOpen(false)}
+        />
+      )}
     </nav>
   );
 }

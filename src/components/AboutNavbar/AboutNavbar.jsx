@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import MobileMenu from '../MobileMenu/MobileMenu';
 import styles from './AboutNavbar.module.css';
-
-const activePaths = { '/': 'Beranda', '/journeys': 'Perjalanan', '/about': 'Tentang' };
 
 const navItems = [
   { label: 'Beranda', href: '/' },
@@ -13,6 +13,7 @@ const navItems = [
 export default function AboutNavbar() {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className={styles.nav}>
@@ -37,10 +38,22 @@ export default function AboutNavbar() {
           ))}
         </nav>
 
-        <button className={styles.mobileBtn} aria-label="Menu">
+        <button
+          className={styles.mobileBtn}
+          onClick={() => setMenuOpen(true)}
+          aria-label="Buka menu"
+        >
           <span className="material-symbols-outlined">menu</span>
         </button>
       </div>
+
+      {menuOpen && (
+        <MobileMenu
+          items={navItems}
+          activePath={currentPath}
+          onClose={() => setMenuOpen(false)}
+        />
+      )}
     </header>
   );
 }
