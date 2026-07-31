@@ -58,6 +58,24 @@
   font-weight: 700;
 }
 
+.imageGallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 48px 0;
+}
+
+.imageGallery .imageWrap {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .imageGallery {
+    gap: 24px;
+    margin: 32px calc(-1 * var(--space-margin-mobile));
+  }
+}
+
 .imageWrap {
   margin: 48px 0;
   position: relative;

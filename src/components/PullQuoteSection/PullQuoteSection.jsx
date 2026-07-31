@@ -6,7 +6,19 @@ export default function PullQuoteSection({ data }) {
       <div className={styles.bgPattern} />
       <div className={styles.inner}>
         <div className={styles.imageCol}>
-          <img className={styles.image} src={data.image} alt={data.label} />
+          {data.video ? (
+            <video
+              src={data.video}
+              className={`${styles.image} ${styles.video}`}
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={data.image}
+            />
+          ) : (
+            <img className={styles.image} src={data.image} alt={data.label} />
+          )}
         </div>
         <div className={styles.textCol}>
           <div className={styles.labelLine}>

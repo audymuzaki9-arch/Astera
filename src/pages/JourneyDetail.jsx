@@ -5,6 +5,7 @@ import DetailHero from '../components/DetailHero/DetailHero';
 import StatsBar from '../components/StatsBar/StatsBar';
 import Timeline from '../components/Timeline/Timeline';
 import StoryContent from '../components/StoryContent/StoryContent';
+import Gallery from '../components/Gallery/Gallery';
 import PullQuoteSection from '../components/PullQuoteSection/PullQuoteSection';
 import Reflection from '../components/Reflection/Reflection';
 import DetailFooter from '../components/DetailFooter/DetailFooter';
@@ -38,6 +39,8 @@ export default function JourneyDetail() {
           <Timeline items={journey.timeline} />
           <StoryContent journey={journey} />
         </section>
+
+        <Gallery journey={journey} />
       </main>
 
       <PullQuoteSection data={journey.pullQuote} />

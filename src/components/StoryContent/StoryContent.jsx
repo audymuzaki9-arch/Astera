@@ -18,16 +18,20 @@ export default function StoryContent({ journey }) {
         </p>
       ))}
 
-      {/* Story image with caption */}
+      {/* Story images with captions */}
       {journey.storyImages && journey.storyImages.length > 0 && (
-        <figure className={styles.imageWrap}>
-          <img className={styles.image} src={journey.storyImages[0]} alt={journey.title} />
-          {journey.storyCaptions && journey.storyCaptions[0] && (
-            <figcaption className={styles.caption}>
-              {journey.storyCaptions[0]}
-            </figcaption>
-          )}
-        </figure>
+        <div className={styles.imageGallery}>
+          {journey.storyImages.map((src, i) => (
+            <figure key={i} className={styles.imageWrap}>
+              <img className={styles.image} src={src} alt={journey.title} />
+              {journey.storyCaptions && journey.storyCaptions[i] && (
+                <figcaption className={styles.caption}>
+                  {journey.storyCaptions[i]}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
       )}
 
       {/* Heading */}
