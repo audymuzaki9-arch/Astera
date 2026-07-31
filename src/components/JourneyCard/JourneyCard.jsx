@@ -66,9 +66,12 @@ export function FeaturedCard({ journey }) {
   );
 }
 
-export function MediumCard({ journey }) {
+export function MediumCard({ journey, offset = false }) {
   return (
-    <Link to={`/journey/${journey.slug}`} className={`${styles.card} ${styles.medium}`}>
+    <Link
+      to={`/journey/${journey.slug}`}
+      className={`${styles.card} ${styles.medium} ${offset ? styles.mediumOffset : ''}`}
+    >
       <ImageWrap variant="medium" src={journey.image} alt={journey.title} slug={journey.slug} />
       <div>
         <div className={styles.mediumMeta}>

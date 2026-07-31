@@ -22,7 +22,7 @@
 
 /* Featured variant (horizontal, 12 cols) */
 .featured {
-  grid-column: span 12;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -32,6 +32,7 @@
 
 @media (min-width: 768px) {
   .featured {
+    grid-column: span 12;
     flex-direction: row;
   }
 }
@@ -199,10 +200,22 @@
 
 /* Medium variant (6 cols, vertical) */
 .medium {
-  grid-column: span 6;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .medium {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 768px) {
+  .mediumOffset {
+    margin-top: 96px;
+  }
 }
 
 .mediumImageWrap {
@@ -313,7 +326,7 @@
 
 /* Small variant (5 cols) */
 .smallLeft {
-  grid-column: span 5;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -322,8 +335,14 @@
   padding-top: 48px;
 }
 
+@media (min-width: 768px) {
+  .smallLeft {
+    grid-column: span 5;
+  }
+}
+
 .smallRight {
-  grid-column: span 7;
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -334,6 +353,7 @@
 
 @media (min-width: 768px) {
   .smallRight {
+    grid-column: span 7;
     margin-top: 128px;
     border-top: none;
     padding-top: 0;

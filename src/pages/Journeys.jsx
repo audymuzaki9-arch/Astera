@@ -29,7 +29,7 @@ export default function Journeys() {
           {featured && <FeaturedCard journey={featured} />}
 
           {medium[0] && <MediumCard journey={medium[0]} />}
-          {medium[1] && <MediumCard journey={medium[1]} />}
+          {medium[1] && <MediumCard journey={medium[1]} offset />}
 
           {small[0] && <SmallCard journey={small[0]} side="left" />}
           {small[1] && <SmallCard journey={small[1]} side="right" />}
