@@ -1,0 +1,72 @@
+.section {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 80px var(--space-margin-mobile);
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px var(--space-margin-mobile);
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-left: var(--space-margin-desktop);
+    padding-right: var(--space-margin-desktop);
+  }
+}
+
+.topLine {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background-color: rgba(195, 200, 192, 0.5);
+}
+
+@media (max-width: 480px) {
+  .topLine {
+    top: 24px;
+    height: 24px;
+  }
+}
+
+.icon {
+  font-size: 28px;
+  color: var(--color-outline);
+  display: inline-block;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  font-weight: 200;
+}
+
+.heading {
+  font-family: var(--font-headline-md);
+  font-size: var(--fs-headline-md);
+  color: var(--color-primary);
+  margin-bottom: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.text {
+  font-family: var(--font-body-lg);
+  font-size: var(--fs-body-lg);
+  line-height: 1.8;
+  color: var(--color-on-surface-variant);
+  max-width: 36rem;
+  margin: 0 auto 32px;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: var(--color-secondary);
+  opacity: 0.8;
+}

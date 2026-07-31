@@ -1,0 +1,143 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: all 300ms;
+}
+
+.navBackground {
+  position: absolute;
+  inset: 0;
+  transition: all 300ms;
+  z-index: -10;
+}
+
+.navBackgroundTransparent {
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
+.navBackgroundSolid {
+  background-color: rgba(248, 246, 240, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 24px var(--space-margin-mobile);
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid transparent;
+  transition: all 300ms;
+}
+
+.navInnerScrolled {
+  padding: 16px var(--space-margin-mobile);
+  border-bottom-color: rgba(195, 200, 192, 0.2);
+}
+
+@media (min-width: 768px) {
+  .navInner {
+    padding-left: var(--space-margin-desktop);
+    padding-right: var(--space-margin-desktop);
+  }
+
+  .navInnerScrolled {
+    padding: 16px var(--space-margin-desktop);
+  }
+}
+
+.brand {
+  font-family: var(--font-headline-lg);
+  font-size: 32px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  z-index: 10;
+  transition: color 300ms;
+}
+
+.brandLight {
+  color: var(--color-on-primary);
+}
+
+.brandDark {
+  color: var(--color-primary);
+}
+
+.desktopLinks {
+  display: none;
+  align-items: center;
+  gap: 48px;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .desktopLinks {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-family: var(--font-label-md);
+  font-size: var(--fs-label-md);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 8px;
+  transition: all 300ms;
+}
+
+.navLinkLight {
+  color: var(--color-on-primary);
+  opacity: 0.7;
+}
+
+.navLinkLight:hover {
+  opacity: 1;
+  color: var(--color-on-primary);
+}
+
+.navLinkLightActive {
+  color: var(--color-on-primary);
+  opacity: 0.8;
+  border-bottom: 1px solid var(--color-on-primary);
+  padding-bottom: 4px;
+}
+
+.navLinkDark {
+  color: var(--color-on-surface-variant);
+}
+
+.navLinkDark:hover {
+  color: var(--color-primary);
+}
+
+.navLinkDarkActive {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding-bottom: 4px;
+}
+
+.mobileMenuBtn {
+  display: block;
+  z-index: 10;
+  color: var(--color-on-primary);
+  transition: color 300ms;
+}
+
+.mobileMenuBtnDark {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
+
+.icon {
+  font-size: 24px;
+}

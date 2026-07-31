@@ -1,0 +1,136 @@
+.sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+    grid-column: span 3;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 120px;
+  padding-top: var(--space-unit);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.headerNum {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-outline-variant);
+}
+
+.headerLine {
+  height: 1px;
+  background-color: var(--color-outline-variant);
+  flex-grow: 1;
+}
+
+.headerTitle {
+  font-family: var(--font-label-md);
+  font-size: var(--fs-label-md);
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.list {
+  list-style: none;
+  position: relative;
+}
+
+.list::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 11px;
+  width: 1px;
+  background-color: rgba(195, 200, 192, 0.4);
+}
+
+.item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 2px solid rgba(195, 200, 192, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 300ms;
+}
+
+.item:hover .dot {
+  border-color: var(--color-primary);
+}
+
+.dotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 300ms;
+}
+
+.item:hover .dotInner {
+  background-color: var(--color-primary);
+}
+
+.dotActive {
+  border-color: var(--color-primary);
+}
+
+.dotActive .dotInner {
+  background-color: var(--color-primary);
+}
+
+.time {
+  font-family: var(--font-label-md);
+  font-size: 10px;
+  color: var(--color-on-surface-variant);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.timeActive {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.itemTitle {
+  font-family: var(--font-headline-md);
+  font-size: var(--fs-headline-md);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.itemTitleActive {
+  font-weight: 700;
+}
+
+.itemDesc {
+  font-family: var(--font-caption);
+  font-size: var(--fs-caption);
+  color: var(--color-on-surface-variant);
+  margin-top: 4px;
+  line-height: 1.3;
+}

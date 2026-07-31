@@ -1,0 +1,139 @@
+.section {
+  margin-bottom: var(--space-section-gap);
+  margin-top: 128px;
+  position: relative;
+}
+
+.decorCircle {
+  position: absolute;
+  top: -80px;
+  left: -40px;
+  width: 128px;
+  height: 128px;
+  border: 1px solid rgba(23, 40, 25, 0.1);
+  border-radius: 50%;
+  opacity: 0.5;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .decorCircle {
+    display: block;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    flex-direction: row;
+  }
+}
+
+.imageCol {
+  width: 100%;
+  z-index: 0;
+  margin-bottom: -40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .imageCol {
+    width: 60%;
+    margin-bottom: 0;
+    margin-right: -10%;
+  }
+}
+
+.imageBorder {
+  position: relative;
+}
+
+.imageBorder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+.textCol {
+  width: 100%;
+  z-index: 10;
+  background-color: var(--color-background);
+  opacity: 0.95;
+  backdrop-filter: blur(1px);
+  padding: 32px;
+  border: 1px solid rgba(23, 40, 25, 0.05);
+  box-shadow: 0 25px 50px -12px rgba(23, 40, 25, 0.05);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .textCol {
+    width: 50%;
+    padding: 48px;
+  }
+}
+
+.decorCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  border-top: 1px solid rgba(23, 40, 25, 0.2);
+  border-right: 1px solid rgba(23, 40, 25, 0.2);
+  margin-top: -8px;
+  margin-right: -8px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .decorCorner {
+    display: block;
+  }
+}
+
+.heading {
+  font-family: var(--font-headline-md);
+  font-size: var(--fs-headline-md);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: 32px;
+}
+
+.body {
+  font-family: var(--font-body-md);
+  font-size: var(--fs-body-md);
+  line-height: 1.7;
+  color: var(--color-on-surface-variant);
+  font-weight: 300;
+}
+
+.body p {
+  margin-bottom: 24px;
+}
+
+.quote {
+  font-style: italic;
+  color: var(--color-primary);
+  opacity: 0.8;
+  border-left: 2px solid rgba(23, 40, 25, 0.2);
+  padding-left: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}

@@ -1,0 +1,202 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 64px;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(23, 40, 25, 0.8),
+    rgba(23, 40, 25, 0.3),
+    transparent
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0 var(--space-margin-mobile);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 500px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 0 var(--space-margin-desktop);
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  opacity: 0.9;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 16px;
+}
+
+.locationIcon {
+  color: var(--color-on-primary);
+  font-size: 14px;
+}
+
+.locationText {
+  font-family: var(--font-label-md);
+  font-size: var(--fs-label-md);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-on-primary);
+}
+
+.headline {
+  font-family: var(--font-display-lg-mobile);
+  font-size: var(--fs-display-lg-mobile);
+  line-height: var(--fs-display-lg-mobile-line-height);
+  letter-spacing: var(--fs-display-lg-mobile-letter-spacing);
+  font-weight: var(--fs-display-lg-mobile-weight);
+  color: var(--color-on-primary);
+  margin-bottom: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  max-width: 56rem;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-family: var(--font-display-lg);
+    font-size: var(--fs-display-lg);
+    line-height: var(--fs-display-lg-line-height);
+    letter-spacing: var(--fs-display-lg-letter-spacing);
+    font-weight: var(--fs-display-lg-weight);
+  }
+}
+
+.headlineItalic {
+  font-style: italic;
+  color: var(--color-secondary-fixed-dim);
+}
+
+.description {
+  font-family: var(--font-body-md);
+  font-size: var(--fs-body-md);
+  line-height: var(--fs-body-md-line-height);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 36rem;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-family: var(--font-body-lg);
+    font-size: var(--fs-body-lg);
+    line-height: var(--fs-body-lg-line-height);
+    letter-spacing: var(--fs-body-lg-letter-spacing);
+  }
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+  .cta {
+    flex-direction: row;
+  }
+}
+
+.ctaButton {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-label-md);
+  font-size: var(--fs-label-md);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 300ms;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-surface-container);
+}
+
+.ctaIcon {
+  font-size: 14px;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 32px;
+  right: var(--space-margin-mobile);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .scrollIndicator {
+    right: var(--space-margin-desktop);
+  }
+}
+
+.scrollLabel {
+  font-family: var(--font-label-md);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.15em;
+  writing-mode: vertical-rl;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollDot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: var(--color-on-primary);
+  animation: scrolldown 2s ease-in-out infinite;
+}

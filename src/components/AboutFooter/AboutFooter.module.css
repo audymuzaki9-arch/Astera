@@ -1,0 +1,90 @@
+.footer {
+  background-color: var(--color-surface-container-low);
+  width: 100%;
+  border-top: 1px solid rgba(23, 40, 25, 0.1);
+}
+
+.inner {
+  width: 100%;
+  padding: 80px var(--space-margin-mobile);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: var(--space-container-max);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding-left: var(--space-margin-desktop);
+    padding-right: var(--space-margin-desktop);
+  }
+}
+
+.brand {
+  font-family: var(--font-display-lg);
+  font-size: var(--fs-headline-lg);
+  color: var(--color-primary);
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+
+.link {
+  font-family: var(--font-label-md);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 300ms;
+}
+
+.linkInactive {
+  color: var(--color-on-surface-variant);
+}
+
+.linkInactive:hover {
+  color: var(--color-primary);
+}
+
+.linkActive {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.copyright {
+  font-family: var(--font-caption);
+  font-size: var(--fs-caption);
+  color: var(--color-on-surface-variant);
+  opacity: 0.7;
+  margin-bottom: 48px;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  opacity: 0.4;
+}
+
+.ornamentLine {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-primary);
+  display: block;
+}
+
+.ornamentNumber {
+  font-family: var(--font-headline-md);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-primary);
+}

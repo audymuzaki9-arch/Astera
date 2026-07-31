@@ -1,0 +1,71 @@
+.section {
+  max-width: 56rem;
+  margin: 0 auto 80px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.label {
+  font-family: var(--font-label-md);
+  font-size: 11px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.labelLine {
+  width: 32px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  opacity: 0.3;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-headline-lg-mobile);
+  font-size: var(--fs-headline-lg-mobile);
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-family: var(--font-display-lg);
+    font-size: var(--fs-display-lg);
+    line-height: var(--fs-display-lg-line-height);
+    letter-spacing: var(--fs-display-lg-letter-spacing);
+    font-weight: var(--fs-display-lg-weight);
+  }
+}
+
+.editorialLine {
+  width: 1px;
+  height: 48px;
+  background-color: var(--color-primary);
+  opacity: 0.2;
+  margin: 0 auto 32px;
+}
+
+@media (max-width: 480px) {
+  .editorialLine {
+    height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.description {
+  font-family: var(--font-body-lg);
+  font-size: var(--fs-body-lg);
+  line-height: var(--fs-body-lg-line-height);
+  color: var(--color-on-surface-variant);
+  max-width: 36rem;
+  margin: 0 auto;
+  font-weight: 300;
+}

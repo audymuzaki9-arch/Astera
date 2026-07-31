@@ -1,0 +1,30 @@
+.bgOrnament {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 40vw;
+  background-color: var(--color-surface-container-low);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -10;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+}
+
+.main {
+  flex-grow: 1;
+  width: 100%;
+  max-width: var(--space-container-max);
+  margin: 0 auto;
+  padding: 140px var(--space-margin-mobile) var(--space-section-gap);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-left: var(--space-margin-desktop);
+    padding-right: var(--space-margin-desktop);
+  }
+}
