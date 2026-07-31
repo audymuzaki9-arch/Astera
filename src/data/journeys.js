@@ -185,7 +185,7 @@ export const journeys = [
       "Malam penuh bintang di tepi danau legendaris.",
       "Hangatnya api unggun bersama sahabat di malam pegunungan.",
     ],
-    asideImage: "img/rakum/cover.jpg",
+    asideImage: "img/rakum/11.jpg",
     storyParagraphs: [
       'Perjalanan menuju Ranu Kumbolo adalah salah satu trek terindah di Indonesia. Melewati hutan tropis yang lebat, savana hijau luas, dan akhirnya tiba di danau yang tenang di kaki Semeru. Setiap langkah menghadirkan pemandangan baru yang memukau.',
       'Kami tiba di Ranu Kumbolo sore hari. Danau itu tenang,permukaannya seperti cermin raksasa yang memantulkan langit biru dan puncak Semeru di kejauhan. Kami segera mendirikan tenda di tepiannya.',
