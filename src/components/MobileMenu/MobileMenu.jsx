@@ -1,36 +1,52 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './MobileMenu.module.css';
 
 export default function MobileMenu({ items, activePath, onClose }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) {
+        onClose();
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    document.addEventListener('touchstart', handleClick);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('touchstart', handleClick);
+    };
+  }, [onClose]);
+
   return (
-    <div className={styles.overlay}>
+    <nav className={styles.dropdown} ref={ref}>
       <div className={styles.header}>
-        <Link to="/" className={styles.brand} onClick={onClose}>
-          Astera
-        </Link>
+        <span className={styles.brand}>Menu</span>
         <button className={styles.closeBtn} onClick={onClose} aria-label="Tutup menu">
           <span className="material-symbols-outlined">close</span>
         </button>
       </div>
 
-      <nav className={styles.menu}>
+      <ul className={styles.list}>
         {items.map((item) => (
-          <Link
-            key={item.href}
-            to={item.href}
-            className={`${styles.link} ${
-              item.href !== '#' &&
-              (activePath === item.href ||
-                (item.href !== '/' && activePath.startsWith(item.href)))
-                ? styles.linkActive
-                : ''
-            }`}
-            onClick={onClose}
-          >
-            {item.label}
-          </Link>
+          <li key={item.href}>
+            <Link
+              to={item.href}
+              className={`${styles.link} ${
+                item.href !== '#' &&
+                (activePath === item.href ||
+                  (item.href !== '/' && activePath.startsWith(item.href)))
+                  ? styles.linkActive
+                  : ''
+              }`}
+              onClick={onClose}
+            >
+              {item.label}
+            </Link>
+          </li>
         ))}
-      </nav>
-    </div>
+      </ul>
+    </nav>
   );
 }

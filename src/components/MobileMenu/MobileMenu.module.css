@@ -1,42 +1,40 @@
-.overlay {
+.dropdown {
   position: fixed;
-  inset: 0;
+  top: 56px;
+  right: var(--space-margin-mobile);
+  width: 220px;
+  background-color: #ffffff;
+  border: 1px solid rgba(195, 200, 192, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  background-color: var(--color-page-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 200ms ease-out;
+  animation: dropIn 200ms ease-out;
 }
 
-@keyframes fadeIn {
+@keyframes dropIn {
   from {
     opacity: 0;
+    transform: translateY(-8px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px var(--space-margin-mobile);
-  border-bottom: 1px solid rgba(23, 40, 25, 0.1);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(195, 200, 192, 0.3);
 }
 
 .brand {
-  font-family: var(--font-display-lg);
-  font-size: var(--fs-headline-lg-mobile);
-  color: var(--color-primary);
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-label-md);
+  font-size: var(--fs-label-md);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-outline);
 }
 
 .closeBtn {
@@ -45,33 +43,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 4px;
 }
 
 .closeBtn:hover {
   opacity: 0.6;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+.list {
+  list-style: none;
+  padding: 8px 0;
 }
 
 .link {
-  font-family: var(--font-display-lg-mobile);
-  font-size: 28px;
-  color: var(--color-on-surface-variant);
+  display: block;
   padding: 12px 16px;
-  transition: color 300ms;
+  font-family: var(--font-label-md);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  transition: background-color 200ms, color 200ms;
+}
+
+.link:hover {
+  background-color: var(--color-surface-container-low);
+  color: var(--color-primary);
 }
 
 .linkActive {
   color: var(--color-primary);
-  border-bottom: 1px solid var(--color-primary);
-}
-
-.link:hover {
-  color: var(--color-primary);
+  font-weight: 700;
 }
