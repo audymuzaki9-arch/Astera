@@ -23,7 +23,16 @@ export default function StoryContent({ journey }) {
         <div className={styles.imageGallery}>
           {journey.storyImages.map((src, i) => (
             <figure key={i} className={styles.imageWrap}>
-              <img className={styles.image} src={src} alt={journey.title} />
+              <img
+                className={styles.image}
+                src={src}
+                alt={journey.title}
+                style={
+                  journey.storyImagePositions?.[i]
+                    ? { objectPosition: journey.storyImagePositions[i] }
+                    : undefined
+                }
+              />
               {journey.storyCaptions && journey.storyCaptions[i] && (
                 <figcaption className={styles.caption}>
                   {journey.storyCaptions[i]}

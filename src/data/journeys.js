@@ -81,10 +81,11 @@ export const journeys = [
       "img/arjuno/4.jpg",
     ],
     storyCaptions: [
-      "Kabut tebal menyelimuti jalur pendakian.",
+      "Sunrise di puncak Arjuno.",
       "Savana luas yang memutih tertutup kabut.",
       "Bebatuan terjal menuju puncak Arjuno.",
     ],
+    storyImagePositions: ["center", "center", "bottom"],
     asideImage: "img/arjuno/quotes.jpg",
     storyParagraphs: [
       'Kabut tebal menyambut kami di Pos 2. Jarak pandang tak lebih dari lima meter, tetapi suara gemerisik daun dan kicau burung menemani setiap langkah. Kami berjalan dalam diam, menikmati setiap hembusan napas yang membentuk awan kecil di udara dingin.',
