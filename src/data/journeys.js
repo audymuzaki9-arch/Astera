@@ -82,8 +82,8 @@ export const journeys = [
     ],
     storyCaptions: [
       "Sunrise di puncak Arjuno.",
-      "Savana luas yang memutih tertutup kabut.",
-      "Bebatuan terjal menuju puncak Arjuno.",
+      "Persimpangan dua jalur menuju puncak.",
+      "Savana luas membentang di balik kabut.",
     ],
     storyImagePositions: ["center", "center", "bottom"],
     asideImage: "img/arjuno/quotes.jpg",
