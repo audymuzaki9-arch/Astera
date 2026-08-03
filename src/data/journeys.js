@@ -59,8 +59,8 @@ export const journeys = [
     duration: "2 Hari 1 Malam",
     mood: "Menantang, Puas",
     description: "Menantang batas diri di jalur bebatuan terjal menuju puncak Arjuno. Sebuah ekspedisi yang menguji fisik dan batin di tengah kabut tebal.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnYz91okdYtGAuH8ywvrtRtlvXZb0fYIYRLQ5ni-9fLkGXO_QYLNfvCWsCe1mF4qLtCT0FlKtoN95ACGDYB7QQwLdGMycItddF1yyx-ITnNljb4xmXcFHDFdardRX-qyQtl_9R0825nZO4yNhQLIbA8yCBMoysOHB3z-GNXouHgL0qhAKesSaAEF9h37wtLIwVHsfoNPVcLtgg6vDEF16a8VeHB_5e0yXMd3bkiAckxZDi7k_ZeX3l",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnYz91okdYtGAuH8ywvrtRtlvXZb0fYIYRLQ5ni-9fLkGXO_QYLNfvCWsCe1mF4qLtCT0FlKtoN95ACGDYB7QQwLdGMycItddF1yyx-ITnNljb4xmXcFHDFdardRX-qyQtl_9R0825nZO4yNhQLIbA8yCBMoysOHB3z-GNXouHgL0qhAKesSaAEF9h37wtLIwVHsfoNPVcLtgg6vDEF16a8VeHB_5e0yXMd3bkiAckxZDi7k_ZeX3l",
+    image: "img/arjuno/cover.jpeg",
+    heroImage: "img/arjuno/1.jpeg",
     featured: true,
     rating: "Perjalanan Pilihan",
     stats: {
@@ -76,10 +76,16 @@ export const journeys = [
       { day: "Hari 2", time: "12:00", title: "Turun", description: "Kembali melalui jalur savana." },
     ],
     storyImages: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAts7XJoRxMg1FOXbqabakFKFggeqa7O9fuwLPanRnjmgyd4s96KeyzPVHPn8wPaWYrUpNe8uIeq7HvNteCykKaugV34knZmmF2QzKeBlVpUsdRMtwnUaL64Mfs2z8MOdl7J_Prg9y5sPUiSQuvXKGGN9ysPoGlZVy939o3ynXvtEZDkBU1KJlxoy2uIDV1oLiUyJb2HKcZAWj37j7mni7zlcaxMcLhskGaZbkfmImMqEDIk0guLT7U",
+      "img/arjuno/2.jpeg",
+      "img/arjuno/3.jpeg",
+      "img/arjuno/4.jpg",
     ],
-    storyCaptions: ["Kabut tebal menyelimuti jalur pendakian."],
-    asideImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnYz91okdYtGAuH8ywvrtRtlvXZb0fYIYRLQ5ni-9fLkGXO_QYLNfvCWsCe1mF4qLtCT0FlKtoN95ACGDYB7QQwLdGMycItddF1yyx-ITnNljb4xmXcFHDFdardRX-qyQtl_9R0825nZO4yNhQLIbA8yCBMoysOHB3z-GNXouHgL0qhAKesSaAEF9h37wtLIwVHsfoNPVcLtgg6vDEF16a8VeHB_5e0yXMd3bkiAckxZDi7k_ZeX3l",
+    storyCaptions: [
+      "Kabut tebal menyelimuti jalur pendakian.",
+      "Savana luas yang memutih tertutup kabut.",
+      "Bebatuan terjal menuju puncak Arjuno.",
+    ],
+    asideImage: "img/arjuno/quotes.jpg",
     storyParagraphs: [
       'Kabut tebal menyambut kami di Pos 2. Jarak pandang tak lebih dari lima meter, tetapi suara gemerisik daun dan kicau burung menemani setiap langkah. Kami berjalan dalam diam, menikmati setiap hembusan napas yang membentuk awan kecil di udara dingin.',
       'Sepanjang perjalanan, kami melewati padang savana luas yang memutih tertutup kabut. Pemandangan surreal yang membuat saya merasa seperti berjalan di atas awan.',
@@ -92,11 +98,21 @@ export const journeys = [
     blockQuote: '"Di atas kabut, selalu ada terang. Arjuno mengajarkan bahwa kesabaran adalah kunci untuk melihat keindahan yang tersembunyi."',
     storyEnding: 'Kami turun dengan kaki gemetar dan hati penuh. Arjuno bukan sekadar gunung; ia adalah guru yang mengajarkan ketenangan di tengah ketidakpastian.',
     pullQuote: {
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnYz91okdYtGAuH8ywvrtRtlvXZb0fYIYRLQ5ni-9fLkGXO_QYLNfvCWsCe1mF4qLtCT0FlKtoN95ACGDYB7QQwLdGMycItddF1yyx-ITnNljb4xmXcFHDFdardRX-qyQtl_9R0825nZO4yNhQLIbA8yCBMoysOHB3z-GNXouHgL0qhAKesSaAEF9h37wtLIwVHsfoNPVcLtgg6vDEF16a8VeHB_5e0yXMd3bkiAckxZDi7k_ZeX3l",
+      image: "img/arjuno/cover.jpeg",
+      video: "img/arjuno/IMG_1768.mp4",
       label: "Puncak Kabut",
       quote: "Angin dan kabut berbicara dalam bahasa yang hanya bisa dipahami oleh mereka yang mau diam sejenak.",
       description: "Momen hening di puncak yang diselimuti awan.",
     },
+    gallery: [
+      "img/arjuno/IMG-20260621-WA0098.jpg",
+      "img/arjuno/IMG-20260621-WA0103.jpg",
+      "img/arjuno/IMG_20260621_072208.jpg",
+      "img/arjuno/IMG_20260621_094933.jpg",
+      "img/arjuno/IMG_2197.jpg",
+      "img/arjuno/IMG_2245.jpg",
+      "img/arjuno/IMG_2283.jpg",
+    ],
     reflection: {
       text: "Arjuno mengajarkan bahwa keindahan tidak selalu harus jelas. Kadang ia tersembunyi di balik kabut tebal, menunggu mereka yang cukup sabar untuk menemuinya. Di puncak itu, saya belajar bahwa perjalanan bukan tentang tujuan, melainkan tentang bagaimana kita meresapi setiap langkah.",
       signature: "Arjuno, 2026",
