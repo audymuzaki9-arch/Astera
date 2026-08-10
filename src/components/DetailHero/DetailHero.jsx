@@ -4,7 +4,16 @@ export default function DetailHero({ journey }) {
   return (
     <header className={styles.hero}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src={journey.heroImage} alt={journey.title} />
+        <img
+          className={styles.image}
+          src={journey.heroImage}
+          alt={journey.title}
+          style={
+            journey.heroImagePosition
+              ? { objectPosition: journey.heroImagePosition }
+              : undefined
+          }
+        />
         <div className={styles.overlay} />
       </div>
 

@@ -28,11 +28,17 @@ export default function Journeys() {
         <section className={styles.grid}>
           {featured && <FeaturedCard journey={featured} />}
 
-          {medium[0] && <MediumCard journey={medium[0]} />}
-          {medium[1] && <MediumCard journey={medium[1]} offset />}
+          {medium.map((j, i) => (
+            <MediumCard key={j.slug} journey={j} offset={i % 2 === 1} />
+          ))}
 
-          {small[0] && <SmallCard journey={small[0]} side="left" />}
-          {small[1] && <SmallCard journey={small[1]} side="right" />}
+          {small.map((j, i) => (
+            <SmallCard
+              key={j.slug}
+              journey={j}
+              side={i % 2 === 0 ? 'left' : 'right'}
+            />
+          ))}
         </section>
 
         <div className={styles.loadmore}>
